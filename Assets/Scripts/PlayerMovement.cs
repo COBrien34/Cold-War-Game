@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 direction = new Vector3(h, 0, v);
         Vector3 velocity = direction * moveSpeed;
 
-        if (charController.isGrounded){
-            if (Input.GetButtonDown("Jump"))
+        if (charController.isGrounded){ //Checking that the player is grounded so jumping can be activated again
+            if (Input.GetButtonDown("Jump")) 
             {
                 yVelocity = jumpSpeed;
             }
