@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
-    public GameObject winScreen;
+    public GameObject winScreen; //Defining variables
 
       void Start()
     {
@@ -12,10 +12,7 @@ public class PortalScript : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-       
-    }
+
 
     void OnTriggerEnter(Collider collider) //Setting the colliders to trigger to on enter
     {

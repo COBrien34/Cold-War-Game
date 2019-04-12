@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeAI : MonoBehaviour {
-    public GameObject[] waypoints;
+    public GameObject[] waypoints; //Defining Variables 
     public int num = 0;
 
     public float minDist;
@@ -25,11 +25,11 @@ public class CubeAI : MonoBehaviour {
         {
             if (dist > minDist)
             {
-                Move();
+                Move(); //Move between waypoints
             }
-            else
+            else //Or
             {
-                if (!rand)
+                if (!rand) //Randomly select waypoint
                 {
                     if (num + 1 == waypoints.Length)
                     {
@@ -49,9 +49,9 @@ public class CubeAI : MonoBehaviour {
 		
 	}
 
-    public void Move()
+    public void Move() //Move function
     {
-        gameObject.transform.LookAt(waypoints[num].transform.position);
+        gameObject.transform.LookAt(waypoints[num].transform.position); //Setting the direction the gameobject faces depending on facing waypoints
         gameObject.transform.position += gameObject.transform.forward * speed * Time.deltaTime;
     }
 }
